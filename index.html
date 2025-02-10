@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/UJdaH9CfGpob.ico" />
+    <title>Netflix India – Watch TV Shows Online, Watch Movies Online</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Nerko+One&family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Nerko+One&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        .slider {
+            display: flex;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+        }
+
+        .slider::-webkit-scrollbar {
+            display: none;
+        }
+
+        .slider-item {
+            min-width: 110px;
+            margin-right: rem;
+        }
+
+        @media (min-width: 1024px) {
+            .slider-item {
+                min-width: 135px;
+            }
+        }
+
+        @media (min-width: 1280px) {
+            .slider-item {
+                min-width: 170px;
+            }
+        }
+
+        @media (min-width: 599px) {
+            .sticky-button {
+                display: none;
+            }
+        }
+
+        .transition-max-height {
+            transition: max-height 0.5s ease-in-out;
+        }
+    </style>
+
+</head>
+
+<body class="bg-black">
+
+    <!-------  Banner   --------->
+    <div class="bg-black">
+
+        <!-------  login   ------>
+
+        <section class="bg-red-5 w-[100%] h-[100vh] bg-[url('banner.jpg')] bg-center bg-cover " id="sec-banner">
+
+            <div class=" w-[100%] h-[100vh] bg-[rgba(0,0,0,0.7)]">
+                <header
+                    class="max-w-[1170px] mx-auto  pt-5 pb-5 pl-6 pr-6 sm:mx-auto sm:pl-6 sm:pt-6 lg:pl-[74px] lg:pr-[74px] lg:pt-3.5 ">
+                    <div class="grid sm:grid-cols-2 grid-cols-[30%_auto] items-center">
+                        <figure>
+                            <img src="Logonetflix.png" class="w-[100px] lg:w-[160px] " alt="">
+                        </figure>
+                        <div class="flex justify-end gap-[10px]">
+                            <div>
+                                <select name="" id=""
+                                    class="bg-[#121110] text-white border-[1px] border-[#ffffff6e] p-[4px_7px] rounded-[5px] text-sm font-semibold">
+                                    <option value="" style="font-family: Roboto, Ubuntu, sans-serif">English</option>
+                                    <option value="">हिन्दी</option>
+                                </select>
+                            </div>
+                            <button class="bg-[#e50914] px-[15px] rounded-[5px] text-white text-sm font-semibold"
+                                style="font-family: Roboto, Ubuntu, sans-serif">
+                                Sign In
+                            </button>
+                        </div>
+                    </div>
+                </header>
+
+                <h1 class="text-white bg-green-5 mt-20 pl-6 pr-6 w-full sm:w-[490px] sm:mt-24 lg:mt-36 lg:w-[470px] lg:text-[36px] xl:text-[55px] xl:w-[740px] xl:leading-snug xl:mt-[85px]  mx-auto leading-[40px] font-bold text-[31px] text-center"
+                    style="font-family:Epilogue,sans-serif;">Unlimited movies, TV shows and more</h1>
+                <p class="text-white bg-red-8 mt-1.5 pl-6 pr-6 w-fit mx-auto font-semibold text-center xl:font-bold xl:text-xl xl:pb-4"
+                    style="font-family: Nunito Sans, sans-serif;">Starts at ₹149. Cancel anytime.</p>
+                <p class="text-white bg-red-8 mt-2 pl-6 pr-6 w-fit sm:w-[500px] sm:mt-3 mx-auto font-semibold text-center xl:w-[700px]"
+                    style="font-family: Nunito Sans, sans-serif;">Ready to watch? Enter your email to create or restart
+                    your membership.</p>
+                <!-- <div
+                    class=" bg-green-900 max-w-[600px] sm:w-fit sm:flex sm:flex-row lg:max-w-full lg:items-center lg:flex lg:flex-row mx-auto pl-8 pr-8 mt-4 flex items-center sm:items-center flex-col">
+                    <input type="text" placeholder="Email address"
+                        class=" text-white sm:pr-24 sm:py-4 sm:pl-12 sm:ml-10   text-sm font-medium text-left w-full p-[12px_10px] rounded-lg sm:rounded-lg border-[1px] border-[#ffffff57] bg-[rgba(82,111,163,0.26)] bg-opacity-20 mb-5">
+                    <button
+                        class="bg-[#e50914] sm:w-full sm:-mt-5 sm:ml-2 sm:mr-10 sm:pl-8  flex gap-3 text-white font-bold text-lg rounded-sm p-[11px_14px]">Get
+                        Started <img src="right-arrow.png" class="w-4 pt-1.5" alt=""></button>
+                </div> -->
+
+                <div
+                    class=" bg-green-9 sm:w-fit sm:flex sm:flex-row lg:w-[900px] lg:flex lg:flex-row xl:max-w-[750px]   max-w-[600px] items-center mx-auto pl-6 pr-6 mt-4 flex flex-col">
+                    <input type="text" placeholder="Email address"
+                        class=" text-white bg-red-6 sm:pr-24 sm:py-4 sm:pl-12 sm:ml-10  w-full p-[12px_10px] rounded-md border-[1px] border-[#ffffff57] bg-[rgba(82,111,163,0.26)] bg-opacity-20 mb-4">
+                    <button
+                        class="bg-[#e50914] sm:w-full sm:-mt-5 sm:ml-2 sm:mr-10 sm:pl-8 lg:max-w-fit flex gap-3 text-white font-bold text-lg rounded-md p-[11px_14px] w-fit">Get
+                        Started <img src="right-arrow.png" class="w-4 pt-1.5 " alt=""></button>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!------  Trending Movies   -------->
+
+        <section class="Trending pl-6 pr-6 mt-5 sm:pl-7 sm:pr-7 xl:mt-20 xl:pl-[80px] xl:pr-[80px] mx-auto bg-black"
+            id="Trending">
+
+            <h1 class="bg-green-9 text-white text-lg font-bold mb-2 lg:pl-[71px] lg:pr-[71px] lg:text-2xl lg:font-medium"
+                style="font-family:Roboto, sans-serif;">
+                Trending Now</h1>
+            <div class="flex flex-col lg:flex-row lg:items-center lg:gap-6 lg:pl-[71px] lg:pr-[71px]">
+                <select name="" id="sel-1"
+                    class="text-white lg:w-fit text-md font-semibold w-full p-[9px_10px] rounded-md lg:rounded-[4px] border-[1px] border-[#ffffff57] bg-[#0f0f0f] mb-3">
+                    <option value="">India</option>
+                    <option value="">Global</option>
+                </select>
+                <select name="" id="sel-2"
+                    class="text-white lg:w-fit lg:-mt-3 text-md w-full p-[9px_10px] rounded-md lg:rounded-[4px] border-[1px] border-[#ffffff57] bg-[#0f0f0f] ">
+                    <option value="">Movies</option>
+                    <option value="">TV Shows</option>
+                </select>
+            </div>
+
+           <!------ Blend Div Sec - 1 & 2 -------->
+          <!------  <div class="absolute bottom-0 left-0 right-0 h-[45%] bg-gradient-to-t from-black to-transparent z-10"></div> ---->
+
+
+
+            <!--------  Movies Slider ---------->
+
+            <div class=" text-white mt-5 pb-8 lg:pl-[71px] lg:pr-[71px]">
+
+                <div class="flex justify-center items-center">
+                    <button id="prev" class="bg-[#333333a2] text-white p-2 pt-12 pb-12 mr-5 rounded-lg">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div id="slider" class="slider space-x-4 lg:space-x-10">
+                        <!-- Movie posters will be dynamically inserted here -->
+                    </div>
+                    <button id="next" class="bg-[#333333a2] text-white p-2 pt-12 pb-12 ml-5 rounded-lg">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+
+                <!-- Modal -->
+
+                <div id="modal" class="fixed inset-0 bg-black bg-opacity-75 flex justify-center items-center hidden">
+                    <div class="relative bg-gray-900 p-6 rounded-lg max-w-2xl w-full">
+                        <button id="closeModal" class="absolute top-0 right-0 m-4 text-white text-2xl">&times;</button>
+                        <img id="modalImage" src="" alt="Movie Poster" class="rounded-lg mb-4 w-full h-64 object-cover">
+                        <div id="modalContent" class="text-white">
+                            <!-- Movie details will be dynamically inserted here -->
+                        </div>
+                        <button class="bg-red-600 text-white px-4 py-2 rounded mt-4">Get Started</button>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!------  More Reasons to Join  ------->
+
+        <section
+            class="More pl-3 pr-3 mx-auto sm:pl-4 sm:pr-4 lg:pl-[74px] lg:pr-[74px] xl:pl-[140px] xl:pr-[140px] lg:mt-5 bg-black text-white font-sans">
+
+            <h2
+                class=" bg-green-7 pl-4 pr-4 lg:text-2xl lg:font-medium lg:pl-[20px] lg:pr-[20px] text-lg mx-auto font-semibold  text-white">
+                More reasons to join</h2>
+
+            <div class=" mx-auto p-4 lg:grid lg:grid-cols-2 lg:gap-x-2  xl:grid xl:grid-cols-4 ">
+
+                <div class="bg-gradient-to-r  from-[#1b1c39] to-[#200f19] rounded-2xl p-4 mb-2 flex">
+                    <div class="">
+                        <h3 class="text-xl font-semibold mb-2">Enjoy on your TV</h3>
+                        <p class="text-md font-medium text-[#bbb8be]">Watch on smart TVs, PlayStation, Xbox, Chromecast,
+                            Apple TV,
+                            Blu-ray players and more.</p>
+                    </div>
+                    <div class="bg-green-6 mt-24 xl:pt-32">
+                        <img src="img1.png" class="w-[160px] sm:w-[70px] lg:w-[150px] xl:w-[300px]">
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-r  from-[#1b1c39] to-[#200f19] rounded-2xl p-4 mb-2 flex ">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Download your shows to watch offline</h3>
+                        <p class="text-md font-medium text-[#bbb8be]">Save your favourites easily and always have
+                            something to watch. TV shows on your
+                            phone, tablet,
+                            laptop.</p>
+                    </div>
+                    <div class="bg-green-6 mt-24 xl:pt-32">
+                        <img src="img2.png" class="w-[160px] sm:w-[70px] lg:w-[180px] xl:w-[300px]" alt="">
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-r  from-[#1b1c39] to-[#20101b] rounded-2xl p-4 mb-2 flex">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Watch everywhere</h3>
+                        <p class="text-md font-medium text-[#bbb8be]">Stream unlimited movies and TV shows on your
+                            phone, tablet,
+                            laptop, TV and many more.</p>
+                    </div>
+                    <div class="bg-green-6 mt-24 xl:pt-32">
+                        <img src="img3.png" class="w-[180px] sm:w-[70px] lg:w-[150px] xl:w-[300px]" alt="">
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-r from-[#1b1c39] to-[#200f1a] rounded-2xl p-4 mb-2 flex">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Create profiles for kids</h3>
+                        <p class="text-md font-medium text-[#bbb8be]">Send kids on adventures with their favourite
+                            characters in a
+                            space made just for them — free with your membership.</p>
+                    </div>
+                    <div class="bg-green-6 mt-28 xl:pt-28">
+                        <img src="img4.png" class="w-[210px] sm:w-[90px] lg:w-[170px] xl:w-[300px]" alt="">
+                    </div>
+                </div>
+
+                <div class="additional-sections">
+                    <!-- Add additional sections here -->
+                </div>
+            </div>
+
+            <button id="stickyButton"
+                class="sticky-button bg-[#e50914] text-white mx-auto text-md font-bold w-10/12 p-[9px] rounded-sm fixed bottom-5 left-1/2 transform -translate-x-1/2 hidden transition duration-2000 ease-in-out ">Get
+                Started</button>
+
+
+        </section>
+
+
+        <!-------   F - Questions     ------>
+
+        <section
+            class="More pl-6 pr-6 sm:pl-8 sm:pr-8 lg:pl-[74px] lg:pr-[74px]  xl:pl-[140px] xl:pr-[140px] mx-auto bg-black text-white font-sans">
+
+            <h1 class="text-lg font-bold mb-4 text-white mt-8 lg:text-2xl lg:font-medium">Frequently Asked Questions
+            </h1>
+
+            <div class="w-full mb-2 ">
+                <div class="bg-[#2d2d2d]  overflow-hidden">
+                    <div class="bg-[#2d2d2d] hover:bg-[#414141] flex justify-between items-center p-5 lg:p-6 xl:p-7 pl-6 cursor-pointer border-black border-[1px]"
+                        onclick="toggleDropdown1()">
+                        <h2 class="text-lg font-semibold lg:text-2xl lg:font-normal">What is Netflix?</h2>
+                        <button id="toggle-icon-1" class="text-white text-xl">&times;</button>
+                    </div>
+                    <div id="dropdown-content-1" class="drop max-h-0 overflow-hidden transition-max-height">
+                        <div class="p-4 lg:text-2xl lg:font-normal">
+                            <p class="mb-4">
+                                Netflix is a streaming service that offers a wide variety of award-winning TV shows,
+                                movies, anime, documentaries and more – on thousands of internet-connected devices.
+                            </p>
+                            <p>
+                                You can watch as much as you want, whenever you want, without a single ad – all for
+                                one low monthly price. There's always something new to discover, and new TV shows
+                                and movies are added every week!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="w-full mb-2">
+                <div class="bg-[#2d2d2d]  overflow-hidden">
+                    <div class="bg-[#2d2d2d] hover:bg-[#414141] flex justify-between items-center p-5 pl-6 lg:p-6 xl:p-7 cursor-pointer border-black border-[1px]"
+                        onclick="toggleDropdown2()">
+                        <h2 class="text-lg font-semibold lg:text-2xl lg:font-normal ">How much does Netflix cost?</h2>
+                        <button id="toggle-icon-2" class="text-white text-xl">&times;</button>
+                    </div>
+                    <div id="dropdown-content-2" class="drop max-h-0 overflow-hidden transition-max-height">
+                        <div class="p-4 lg:text-2xl lg:font-normal">
+                            <p class="mb-4">
+                                Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all
+                                for one fixed monthly fee. Plans range from ₹149 to ₹649 a month. No extra costs, no
+                                contracts.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="w-full mb-2">
+                <div class="bg-[#2d2d2d]  overflow-hidden">
+                    <div class="bg-[#2d2d2d] hover:bg-[#414141] flex justify-between items-center p-5 pl-6 lg:p-6 xl:p-7 cursor-pointer border-black border-[1px]"
+                        onclick="toggleDropdown3()">
+                        <h2 class="text-lg font-semibold lg:text-2xl lg:font-normal">Where can I watch?</h2>
+                        <button id="toggle-icon-3" class="text-white text-xl">&times;</button>
+                    </div>
+                    <div id="dropdown-content-3" class="drop max-h-0 overflow-hidden transition-max-height">
+                        <div class="p-4 lg:text-2xl lg:font-normal">
+                            <p class="mb-4">
+                                Watch anywhere, anytime. Sign in with your Netflix account to watch instantly on the
+                                web at netflix.com from your personal computer or on any internet-connected device
+                                that offers the Netflix app, including smart TVs, smartphones, tablets, streaming
+                                media players and game consoles.</p>
+                            <p>
+                                You can also download your favourite shows with the iOS or Android app. Use
+                                downloads to watch while you're on the go and without an internet connection. Take
+                                Netflix with you anywhere.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class=" bg-red-60 w-full mb-2">
+                <div class="bg-[#2d2d2d] overflow-hidden">
+                    <div class="bg-[#2d2d2d] hover:bg-[#414141] flex justify-between items-center p-5 pl-6 lg:p-6 xl:p-7 cursor-pointer border-black border-[1px]"
+                        onclick="toggleDropdown4()">
+                        <h2 class="text-lg font-semibold lg:text-2xl lg:font-normal">How do I cancel?</h2>
+                        <button id="toggle-icon-4" class="text-white text-xl">&times;</button>
+                    </div>
+                    <div id="dropdown-content-4" class="drop max-h-0 overflow-hidden transition-max-height">
+                        <div class="p-4 lg:text-2xl lg:font-normal">
+                            <p class="mb-4">
+                                Netflix is flexible. There are no annoying contracts and no commitments. You can
+                                easily cancel your account online in two clicks. There are no cancellation fees –
+                                start or stop your account anytime.
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="w-full mb-2">
+                <div class="bg-[#2d2d2d]  overflow-hidden">
+                    <div class="bg-[#2d2d2d] hover:bg-[#414141] flex justify-between items-center p-5 pl-6 lg:p-6 xl:p-7 cursor-pointer border-black border-[1px]"
+                        onclick="toggleDropdown5()">
+                        <h2 class="text-lg font-semibold lg:text-2xl lg:font-normal">What can I watch on Netflix?</h2>
+                        <button id="toggle-icon-5" class="text-white text-xl">&times;</button>
+                    </div>
+                    <div id="dropdown-content-5" class=" drop max-h-0 overflow-hidden transition-max-height">
+                        <div class="p-4 lg:text-2xl lg:font-normal">
+                            <p class="mb-4">
+                                Netflix has an extensive library of feature films, documentaries, TV shows, anime,
+                                award-winning Netflix originals, and more. Watch as much as you want, anytime you
+                                want.</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="w-full mb-2 ">
+                <div class="bg-[#2d2d2d]  overflow-hidden">
+                    <div class="bg-[#2d2d2d] hover:bg-[#414141] flex justify-between items-center p-5 pl-6 lg:p-6 xl:p-7 cursor-pointer border-black border-[1px]"
+                        onclick="toggleDropdown6()">
+                        <h2 class="text-lg font-semibold lg:text-2xl lg:font-normal ">Is Netflix good for kids?</h2>
+                        <button id="toggle-icon-6" class="text-white text-xl">&times;</button>
+                    </div>
+                    <div id="dropdown-content-6" class="drop max-h-0 overflow-hidden transition-max-height">
+                        <div class="p-4 lg:text-2xl lg:font-normal">
+                            <p class="mb-4">
+                                The Netflix Kids experience is included in your membership to give parents control
+                                while kids enjoy family-friendly TV shows and films in their own space.</p>
+                            <p>
+                                Kids profiles come with PIN-protected parental controls that let you restrict the
+                                maturity rating of content kids can watch and block specific titles you don’t want
+                                kids to see.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!------  Login - 2    ------->
+
+        <h1 class="text-white sm:text-center mx-auto mt-16 pl-6 pr-6 font-sans font-semibold text-md">Ready to watch?
+            Enter your email
+            to create or restart your membership.</h1>
+
+        <div
+            class=" bg-green-9 sm:flex sm:flex-row sm:max-w-full sm:gap-2 sm:pl-8 sm:pr-8 sm:items-center lg:w-[850px] lg:pl-[100px] lg:pr-[74px] xl:w-[1000px] max-w-[600px] mx-auto pl-6 pr-6 mt-4 flex flex-col">
+            <input type="text" placeholder="Email address"
+                class=" text-white bg-red-6 sm:w-[72%] sm:p-4 text-sm text-left w-full p-[12px_10px] rounded-md border-[1px] border-[#ffffff57] bg-[rgba(82,111,163,0.26)] bg-opacity-20 mb-4">
+            <button
+                class="bg-[#e50914] sm:max-w-fit sm:-mt-4 xl:pl-7 xl:pr-7 xl:text-2xl flex gap-3 text-white font-bold text-lg rounded-md p-[11px_14px] w-fit">Get
+                Started <img src="right-arrow.png" class="w-4 pt-1.5 " alt=""></button>
+        </div>
+
+
+        <!-------  Footer  -------->
+
+        <section class=" mx-auto bg-black text-[#a9a9a9]  font-sans">
+
+            <h1
+                class="mt-14 pl-6 pr-6 sm:pl-8 sm:pr-8 lg:pl-[74px] lg:pr-[74px] xl:pl-[140px] xl:pr-[140px] font-semibold text-md">
+                Questions? Call
+                <a href="tel:000-800-919-1694">000-800-919-1694</a>
+            </h1>
+            <div class="bg-red-8  sm:flex sm:flex-row lg:pl-[74px] lg:pr-[74px] xl:pl-[140px] xl:pr-[140px] ">
+                <div
+                    class=" 1 bg-orange-8 sm:w-[42%] lg:w-[30%] space-y-4 mt-10 mb-5 pl-6 pr-6 sm:pl-8 sm:pr-8 lg:text-md lg:font-semibold text-sm font-medium  ">
+                    <div class="cursor-pointer underline ">FAQ</div>
+                    <div class="cursor-pointer underline ">Help Center</div>
+                    <div class="cursor-pointer underline ">Account</div>
+                    <div class="cursor-pointer underline ">Media Center</div>
+                    <div class="cursor-pointer underline ">Investor Relations</div>
+                </div>
+                <div
+                    class="2 bg-green-7 sm:w-[42%] lg:w-[30%] space-y-4 mb-5 sm:mt-10 sm:mb-14 sm:pl-6 sm:pr-6 pl-6 pr-6 lg:text-md lg:font-semibold text-sm font-medium">
+                    <div class="cursor-pointer underline ">Jobs</div>
+                    <div class="cursor-pointer underline ">Ways to Watch</div>
+                    <div class="cursor-pointer underline ">Terms of Use</div>
+                    <div class="cursor-pointer underline ">Privacy</div>
+                    <div class="cursor-pointer underline ">Coolie Preference</div>
+                </div>
+                <div
+                    class="3 bg-green-7 space-y-4 mb-14 sm:mt-10 sm:mb-14 sm:pl-6 sm:pr-6 pl-6 pr-6 lg:text-md lg:font-semibold text-sm font-medium">
+                    <div class="cursor-pointer underline ">Corporate Information</div>
+                    <div class="cursor-pointer underline ">Contact Us</div>
+                    <div class="cursor-pointer underline ">Speed Test</div>
+                    <div class="cursor-pointer underline ">Legal Notice</div>
+                    <div class="cursor-pointer underline ">Only on Netflix</div>
+                </div>
+            </div>
+
+    </div>
+
+      <!------ Blend Div Sec - 1 & 2 -------->
+            <div class="absolute bottom-0 left-0 right-0 h-[45%] bg-gradient-to-t from-black to-transparent z-10"></div> 
+
+
+    <div class="mx-auto pl-6 pr-6 sm:pl-8 sm:pr-8 lg:pl-[74px] lg:pr-[74px] xl:pl-[140px] xl:pr-[140px]">
+        <select name="" id=""
+            class="bg-[#121110] text-white border-[1px] border-[#ffffff6e] p-[4px_7px] rounded-[5px] text-md font-semibold">
+            <option value="" style="font-family: Roboto, Ubuntu, sans-serif">English</option>
+            <option value="">हिन्दी</option>
+        </select>
+    </div>
+
+    <h1
+        class="bg-red-8 mx-auto pl-6 pr-6 pb-10 sm:pl-8 sm:pr-8 mt-12 sm:mt-8 lg:pl-[74px] lg:pr-[74px] xl:pl-[140px] xl:pr-[140px] sm:text-md lg:text-lg text-sm font-semibold text-[#717171]">
+        Netflix India
+    </h1>
+
+    <h1
+        class="bg-red-8 mx-auto pl-6 pr-6 text-center pb-20 sm:pl-8 sm:pr-8 mt-12 sm:mt-8 lg:pl-[74px] lg:pr-[74px] xl:pl-[140px] xl:pr-[140px] sm:text-md lg:text-lg text-sm font-semibold text-[#717171]">
+        Copyright © 2024 by Prashanth. All rights reserved.
+
+    </h1>
+
+
+    </section>
+
+    </div>
+
+   
+
+    <script src="script.js"></script>
+</body>
+
+</html>
